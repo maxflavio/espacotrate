@@ -1,0 +1,15 @@
+<h1>Listing reles</h1>
+ 
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+  </tr>
+ 
+  <% @reles.each do |rele| %>
+    <tr>
+      <td><%= rele.id_rele %></td>
+      <td><%= rele.nome %></td>
+    </tr>
+  <% end %>
+</table>

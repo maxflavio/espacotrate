@@ -1,0 +1,2 @@
+class Rele < ApplicationRecord
+end

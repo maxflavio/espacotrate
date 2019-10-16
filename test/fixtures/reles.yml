@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  nome: MyString
+  ligado: false
+
+two:
+  id: MyString
+  nome: MyString
+  ligado: false
