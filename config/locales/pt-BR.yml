@@ -151,3 +151,6 @@ pt-BR:
         default_col_sep: ","
         col_sep: Separador de coluna
         col_sep_help: Deixe em branco para utilizar o padrão ('%{value}') # value is default_col_sep
+
+
+

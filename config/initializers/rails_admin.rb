@@ -40,4 +40,29 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Artigo' do
+    list do
+      exclude_fields :created_at, :updated_at, :texto, :ativo
+    end
+  end
+
+  config.model 'Depoimento' do
+    list do
+      exclude_fields :created_at, :updated_at
+    end
+  end
+
+  config.model 'Pessoa' do
+    list do
+      exclude_fields :created_at, :updated_at
+    end
+  end
+
+  config.model 'Rele' do
+    list do
+      exclude_fields :created_at, :updated_at
+    end
+  end
+
 end
