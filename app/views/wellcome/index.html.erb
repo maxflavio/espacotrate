@@ -251,13 +251,14 @@
                     <!-- /.section title start-->
                 </div>
             </div>
+
             <div class="row">
                 <% @artigos.each do |artigo| %>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="post-block">
                         <!-- post block -->
                         <div class="post-img">
-                            <a href="#"><img style="width: 360px; height: 200px;" src="images/incontinencia_urinaria.jpg" alt="" class="img-responsive"></a>
+                            <a href="#"> <%= image_tag artigo.foto, style: 'width: 360px; height: 200px;;' %></a>
                         </div>
                         <div class="post-content">
                             <h2><a href="#" class="title"> <%= artigo.titulo %></a></h2>
