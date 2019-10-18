@@ -195,29 +195,19 @@
                     <!-- /.section title end-->
                 </div>
             </div>
-            
-                <div style="margin-left: 25%" class="col-lg-3 col-sm-3 col-sm-6 col-xs-12">
+          <% @pessoas.each do |pessoa| %>
+                <div class="col-lg-3 col-sm-3 col-sm-6 col-xs-12">
                     <div class="team-block">
-                        <!-- team block start-->
-                        <div class="team-img"><img style="width: 262px; height: 310px;" src="images/foto_ludmilla.jpeg"></div>
+                        <div class="team-img">
+                          <%= image_tag pessoa.foto, style: 'width: 262px; height: 310px;' %>
+                        </div>
                         <div class="team-content">
-                            <h2 class="team-title">Dr. Ludmila Mota</h2>
-                            <div class="team-meta"><span class="team-designation">Fisioterapeuta</span></div>
+                            <h2 class="team-title"> <%= pessoa.nome %></h2>
+                            <div class="team-meta"><span class="team-designation"><%= pessoa.nome_profissao %></span></div>
                         </div>
                     </div>
-                    <!-- team block end -->
                 </div>
-                <div style="" class="col-lg-3 col-sm-3 col-sm-6 col-xs-12">
-                    <div class="team-block">
-                        <!-- team block start-->
-                        <div class="team-img"><img style="width: 262px; height: 310px;" src="images/foto_ana.jpeg"></div>
-                        <div class="team-content">
-                            <h2 class="team-title">Dr. Ana</h2>
-                            <div class="team-meta"><span class="team-designation">Médica</span></div>
-                        </div>
-                    </div>
-                    <!-- team block end -->
-                </div>
+          <% end %>
             </div>
         </div>
     </div>
