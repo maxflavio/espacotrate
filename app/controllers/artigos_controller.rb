@@ -1,5 +1,7 @@
 class ArtigosController < ApplicationController
 
+	before_action :authenticate_user!
+
 	def show
     	@artigo = Artigo.find(params[:id])
   	end

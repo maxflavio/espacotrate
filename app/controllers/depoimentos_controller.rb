@@ -1,8 +1,10 @@
 class DepoimentosController < ApplicationController
 
+	before_action :authenticate_user!
+
 	def show
     	@depoimento = Depoimento.find(params[:id])
-  	end
+  end
 
 	def new
 	end

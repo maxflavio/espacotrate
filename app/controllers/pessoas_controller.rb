@@ -1,5 +1,7 @@
 class PessoasController < ApplicationController
 
+  before_action :authenticate_user!
+
   def show
     @pessoa = Pessoa.find(params[:id])
   end

@@ -1,5 +1,7 @@
 class NewslettersController < ApplicationController
 
+  before_action :authenticate_user!, :except => [:create]
+
   def show
     @newsletter = Newsletter.find(params[:id])
   end

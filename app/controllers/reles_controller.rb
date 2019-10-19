@@ -1,5 +1,7 @@
 class RelesController < ApplicationController
 
+	before_action :authenticate_user!
+
 	def show
     	@rele = Rele.find(params[:id])
   	end
