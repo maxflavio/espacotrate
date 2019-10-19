@@ -1,0 +1,16 @@
+default: &default
+  instagram: "espaco_trate"
+  telefone:  "62 99326-0985"
+  youtube:   "espaco_trate"
+  email:     "ludmillapmota@gmail.com"
+  endereco_clinica:     "Rua 10, Setor Sul, Goiânia - GO"
+  facebook:     "espaco_trate"
+
+development:
+  <<: *default
+
+test: &test
+  <<: *default
+
+production:
+  <<: *default
