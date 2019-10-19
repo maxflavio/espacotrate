@@ -1,6 +1,5 @@
 class PessoasController < ApplicationController
 
-
   def show
     @pessoa = Pessoa.find(params[:id])
   end

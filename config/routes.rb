@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :reles
   resources :artigos
+  resources :newsletters
 
   root 'wellcome#index'
 
