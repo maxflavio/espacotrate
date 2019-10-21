@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_19_103906) do
+ActiveRecord::Schema.define(version: 2019_10_21_183410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,10 +52,29 @@ ActiveRecord::Schema.define(version: 2019_10_19_103906) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "evolucaos", force: :cascade do |t|
+    t.date "data"
+    t.text "desricao"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "newsletters", force: :cascade do |t|
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pacientes", force: :cascade do |t|
+    t.string "nome"
+    t.integer "idade"
+    t.string "cpf"
+    t.date "data_nasc"
+    t.string "profissao"
+    t.string "endereco"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "evolucao_id"
   end
 
   create_table "pessoas", force: :cascade do |t|
@@ -69,6 +88,13 @@ ActiveRecord::Schema.define(version: 2019_10_19_103906) do
     t.string "id_rele"
     t.string "nome"
     t.boolean "ligado"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "servicos", force: :cascade do |t|
+    t.string "titulo"
+    t.string "descricao"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

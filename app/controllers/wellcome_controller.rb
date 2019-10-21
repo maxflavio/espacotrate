@@ -3,6 +3,8 @@ class WellcomeController < ApplicationController
   	@depoimentos = Depoimento.all
   	@artigos = Artigo.all
     @pessoas = Pessoa.all
+    @servicos = Servico.all
+
     @newsletter = Newsletter.new
 
     @instagram = GlobalConstants::CONF['instagram']

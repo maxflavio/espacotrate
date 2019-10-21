@@ -25,16 +25,19 @@ RailsAdmin.config do |config|
 
   config.main_app_name = ["Espaço Trate, Saúde Integrada"]
 
+  config.excluded_models << "Rele"
+  config.excluded_models << "User"
+  config.excluded_models << "Newsletter"
+  config.excluded_models << "Attachment"
+
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
     new
-    export
-    bulk_delete
     show
     edit
     delete
-    show_in_app
 
     ## With an audit adapter, you can add:
     # history_index
@@ -46,6 +49,13 @@ RailsAdmin.config do |config|
       exclude_fields :created_at, :updated_at, :texto, :ativo
     end
   end
+
+  config.model 'Attachment' do
+    list do
+      exclude_fields :created_at
+    end
+  end
+
 
   config.model 'Depoimento' do
     list do

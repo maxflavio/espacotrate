@@ -97,74 +97,19 @@
                 </div>
             </div>
             <div class="row">
+                <% @servicos.each do |servico| %>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="service-block">
-                        <!-- service block -->
                         <div class="service-img mb20">
-                            <!-- service img -->
-                            <a href="#"><img src="images/servico_acupuntura.jpg" alt="" class="img-responsive"></a>
+                          <%= image_tag servico.foto, style: 'width: 262.500px; height: 147.750px' %>
                         </div>
-                        <!-- service img -->
                         <div class="service-content">
-                            <!-- service content -->
-                            <h2><a href="#" class="title">Acupuntura</a></h2>
-                            <p>Melhora do sistema circulatório e imunológico, melhora do sono, e diminuição de sintomas de depressão e ansiedade são apenas alguns dos benefícios dessa técnica milenar.</p>
+                            <h2><a href="#" class="title"><%= servico.titulo %></a></h2>
+                            <p><%= servico.descricao %></p>
                         </div>
-                        <!-- service content -->
                     </div>
-                    <!-- /.service block -->
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-block">
-                        <!-- service block -->
-                        <div class="service-img mb20">
-                            <!-- service img -->
-                            <a href="#"><img style="width: 262.500px; height: 147.750px" src="images/servico_ventosa.jpg" alt="" class="img-responsive"></a>
-                        </div>
-                        <!-- service img -->
-                        <div class="service-content">
-                            <!-- service content -->
-                            <h2><a href="#" class="title">Ventosaterapia</a></h2>
-                            <p>Redução de celulites e estrias, aumento da circulação local, desintoxicação do organismo e alívio de dores na colunas são alguns dos benefícios dessa técnica.</p>
-                        </div>
-                        <!-- service content -->
-                    </div>
-                    <!-- /.service block -->
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-block">
-                        <!-- service block -->
-                        <div class="service-img mb20">
-                            <!-- service img -->
-                            <a href="#"><img style="width: 262.500px; height: 147.750px" src="images/servico_drenagem.jpg" alt="" class="img-responsive"></a>
-                        </div>
-                        <!-- service img -->
-                        <div class="service-content">
-                            <!-- service content -->
-                            <h2><a href="#" class="title">Drenagem</a></h2>
-                            <p>Eliminação de líquidos acumulados no corpo, sento amplamento utilizada no alívio de hematomas e inchaços após cirurgias plásticas, assim como para tratamento de celulite.</p>
-                        </div>
-                        <!-- service content -->
-                    </div>
-                    <!-- /.service block -->
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-block">
-                        <!-- service block -->
-                        <div class="service-img mb20">
-                            <!-- service img -->
-                            <a href="#"><img style="width: 262.500px; height: 147.750px" src="images/servico_osteopatia.jpg" alt="" class="img-responsive"></a>
-                        </div>
-                        <!-- service img -->
-                        <div class="service-content">
-                            <!-- service content -->
-                            <h2><a href="#" class="title">Osteopatia</a></h2>
-                            <p>Dores nas costas, pescoço, torcicolo, tendinite, hérnia discal, cólicas, hérnia de hiato, dismenorreia (dor na mestruação). Tudo tratado com movimentos do corpo, sem remédios.</p>
-                        </div>
-                        <!-- service content -->
-                    </div>
-                    <!-- /.service block -->
-                </div>
+                <% end %>
             </div>
         </div>
     </div>
