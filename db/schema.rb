@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_21_183410) do
+ActiveRecord::Schema.define(version: 2019_10_22_132651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 2019_10_21_183410) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "ativo"
     t.string "resumo"
+    t.string "url"
+    t.string "palavras_chave"
+    t.string "paragrafo1"
+    t.string "paragrafo2"
+    t.string "paragrafo3"
+    t.string "paragrafo4"
+    t.string "paragrafo5"
+    t.string "paragrafo6"
+    t.string "paragrafo7"
+    t.string "paragrafo8"
   end
 
   create_table "depoimentos", force: :cascade do |t|
@@ -52,29 +62,10 @@ ActiveRecord::Schema.define(version: 2019_10_21_183410) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "evolucaos", force: :cascade do |t|
-    t.date "data"
-    t.text "desricao"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "newsletters", force: :cascade do |t|
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "pacientes", force: :cascade do |t|
-    t.string "nome"
-    t.integer "idade"
-    t.string "cpf"
-    t.date "data_nasc"
-    t.string "profissao"
-    t.string "endereco"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "evolucao_id"
   end
 
   create_table "pessoas", force: :cascade do |t|

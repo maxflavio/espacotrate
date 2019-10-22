@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'show_artigo/index'
   devise_for :users, skip: :wellcome
   get 'wellcome/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -9,5 +10,8 @@ Rails.application.routes.draw do
   resources :newsletters
 
   root 'wellcome#index'
+
+  get 'show_artigo/:id', :controller => 'show_artigo', :action => 'index', :method => :get
+
 
 end
