@@ -36,4 +36,4 @@ yarn-debug.log*
 
 
 /config/database.yml
-/config/configuracoes.ym
+/config/configuracoes.yml
