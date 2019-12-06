@@ -3,7 +3,8 @@ class WellcomeController < ApplicationController
   	@depoimentos = Depoimento.all
   	@artigos = Artigo.all
     @pessoas = Pessoa.all
-    @servicos = Servico.all
+    @servicos = Servico.first(4)
+    @servicos2 = Servico.last(4)
 
     @newsletter = Newsletter.new
 

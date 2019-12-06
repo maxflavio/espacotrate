@@ -101,6 +101,8 @@
                     <!-- /.section title start-->
                 </div>
             </div>
+
+
             <div class="row">
                 <% @servicos.each do |servico| %>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -116,6 +118,24 @@
                 </div>
                 <% end %>
             </div>
+
+          <div class="row">
+              <% @servicos2.each do |servico| %>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="service-block">
+                    <div class="service-img mb20">
+                      <%= image_tag servico.foto, style: 'width: 262.500px; height: 147.750px' %>
+                    </div>
+                    <div class="service-content">
+                      <h2><a href="#" class="title"><%= servico.titulo %></a></h2>
+                      <p><%= servico.descricao %></p>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+
+
         </div>
     </div>
     <div class="space-small bg-primary">
