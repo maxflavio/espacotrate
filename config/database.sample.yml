@@ -1,8 +1,8 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: espacotrate
+  database: postgres
   pool: 5
   username: postgres
-  password: postgres
+  password:
   host: localhost
