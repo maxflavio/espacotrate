@@ -4,5 +4,5 @@ development:
   database: postgres
   pool: 5
   username: postgres
-  password:
+  password: postgres
   host: localhost
